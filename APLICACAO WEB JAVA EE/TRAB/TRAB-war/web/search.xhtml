@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+      <h:form>
+        <p:dataTable var ="v" value ="#{VagaControler.search()}" >
+           
+            <p:column>
+                <f:facet name="header"> Empresa </f:facet>
+                <h:outputText value="#{VagaControler.area}" ></h:outputText>
+            </p:column>
+            <p:column>
+                <f:facet name="header"> Area</f:facet>
+                <h:outputText value="#{v.area}" ></h:outputText>
+            </p:column>
+            <p:column>
+                <f:facet name="header"> Requisitos</f:facet>
+                <h:outputText value="#{v.requisitos}" ></h:outputText>
+            </p:column>
+            <p:column>
+                <f:facet name="header"> Local</f:facet>
+                <h:outputText value="#{v.localTrab}" ></h:outputText>
+            </p:column>
+            <p:column>
+                <f:facet name="header"> Horario</f:facet>
+                <h:outputText value="#{v.horario}" ></h:outputText>
+            </p:column>
+        </p:dataTable>
+    </h:form>
+
+    </h:body>
+</html>
+

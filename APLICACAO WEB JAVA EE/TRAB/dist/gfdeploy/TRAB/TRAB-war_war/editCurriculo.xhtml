@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <f:view>
+
+
+            <h:form>
+                <h1><h:outputText value="Create"/></h1>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="Nome:" for="nome" />
+                    <h:inputText id="nome" value="#{usuLogado.c.nome}" title="Nome" />
+                    <h:outputLabel value="Empresa:" for="empresa" />
+                    <h:inputText id="empresa" value="#{usuLogado.c.empresa}" title="Empresa" />
+                    <h:outputLabel value="Area:" for="area" />
+                    <h:inputText id="area" value="#{usuLogado.c.area}" title="Area" />
+                    <h:outputLabel value="Experiencia:" for="area" />
+                    <h:inputText id="exp" value="#{usuLogado.c.experiencia}" title="exp" />
+                    <h:outputLabel value="Formacao:" for="area" />
+                    <h:inputText id="formacao" value="#{usuLogado.c.formacao}" title="formacao" />
+                    <h:commandButton value="Save" action="#{usuLogado.editC(usuLogado.c.codCurriculo)}"></h:commandButton>
+                </h:panelGrid>
+            </h:form>
+        </f:view>
+
+    </h:body>
+</html>
+
